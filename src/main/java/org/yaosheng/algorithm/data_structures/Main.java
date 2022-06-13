@@ -44,27 +44,35 @@ public class Main {
 //        stack.pop ();
 //        System.out.println (stack);
 
-        int opCount = 100000;
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue<> ();
-        double time1 = testQueue (arrayQueue,opCount);
-        System.out.println ("ArrayQueue,time " + time1 + "s");
+//        int opCount = 100000;
+//        ArrayQueue<Integer> arrayQueue = new ArrayQueue<> ();
+//        double time1 = testQueue (arrayQueue,opCount);
+//        System.out.println ("ArrayQueue,time " + time1 + "s");
+//
+//        LoopQueue<Integer> loopQueue = new LoopQueue<> ();
+//        double time2 = testQueue (loopQueue,opCount);
+//        System.out.println ("LoopQueue,time " + time2 + "s");
+//
+//        LinkedList<Integer> linkedList = new LinkedList<> ();
+//        for(int i = 0;i < 5;i ++){
+//            linkedList.addFirst (i);
+//            System.out.println (linkedList);
+//        }
+//        linkedList.add (2,666);
+//        System.out.println (linkedList);
+//
+//        linkedList.remove (2);
+//        System.out.println (linkedList);
+//
+//        linkedList.removeFirst ();
+//        System.out.println (linkedList);
 
-        LoopQueue<Integer> loopQueue = new LoopQueue<> ();
-        double time2 = testQueue (loopQueue,opCount);
-        System.out.println ("LoopQueue,time " + time2 + "s");
-
-        LinkedList<Integer> linkedList = new LinkedList<> ();
+        LinkedListStack<Integer> stack = new LinkedListStack<> ();
         for(int i = 0;i < 5;i ++){
-            linkedList.addFirst (i);
-            System.out.println (linkedList);
+            stack.push (i);
+            System.out.println (stack);
         }
-        linkedList.add (2,666);
-        System.out.println (linkedList);
-
-        linkedList.remove (2);
-        System.out.println (linkedList);
-
-        linkedList.removeFirst ();
-        System.out.println (linkedList);
+        stack.pop ();
+        System.out.println (stack);
     }
 }
