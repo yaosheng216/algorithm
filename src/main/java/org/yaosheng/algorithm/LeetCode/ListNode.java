@@ -34,6 +34,7 @@ public class ListNode {
             res.append (cur.val + "->");
             cur = cur.next;
         }
+
         res.append ("NULL");
         return res.toString ();
     }
