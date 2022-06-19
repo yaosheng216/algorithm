@@ -1,10 +1,12 @@
-package org.yaosheng.algorithm.data_structures;
+package org.yaosheng.algorithm.Linked;
+
+import org.yaosheng.algorithm.data_structures.Stack;
 
 /**
  * Created by yaosheng on 2022/6/13.
  * 使用链表实现栈
  */
-public class LinkedListStack<E> implements Stack<E>{
+public class LinkedListStack<E> implements Stack<E> {
 
     private LinkedList<E> list;
 

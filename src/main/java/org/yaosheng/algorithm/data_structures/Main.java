@@ -1,5 +1,7 @@
 package org.yaosheng.algorithm.data_structures;
 
+import org.yaosheng.algorithm.Linked.LinkedListStack;
+
 import java.util.Random;
 
 /**
