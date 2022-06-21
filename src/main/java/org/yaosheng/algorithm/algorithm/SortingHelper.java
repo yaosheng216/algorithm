@@ -1,5 +1,7 @@
 package org.yaosheng.algorithm.algorithm;
 
+import org.yaosheng.algorithm.MergeSort.MergeSort;
+
 /**
  * Created by yaosheng on 2022/6/11.
  */
@@ -23,6 +25,8 @@ public class SortingHelper {
             SelectionSort.sort (arr);
         else if(sortname.equals ("InsertionSort2"))
             SelectionSort.sort (arr);
+        else if(sortname.equals ("MergeSort"))
+            MergeSort.sort (arr);
         long end = System.nanoTime ();
 
         double time = (end - start) / 1000000000.0;
