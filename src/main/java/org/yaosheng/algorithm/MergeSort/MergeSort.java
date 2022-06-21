@@ -55,6 +55,11 @@ public class MergeSort {
 
         int n = 100000;
         Integer[] arr = ArrayGenerator.generateRandomArray (n,n);
-        SortingHelper.sortTest ("MergeSort", arr);
+        Integer[] arr2 = Arrays.copyOf (arr,arr.length);
+        Integer[] arr3 = Arrays.copyOf (arr,arr.length);
+
+        SortingHelper.sortTest ("SelectionSort",arr);
+        SortingHelper.sortTest ("InsertionSort",arr2);
+        SortingHelper.sortTest ("MergeSort", arr3);
     }
 }
