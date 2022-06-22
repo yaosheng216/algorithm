@@ -34,6 +34,19 @@ public class InsertionSort {
         }
     }
 
+    public static  <E extends Comparable<E>> void sort3(E[] arr,int l,int r){
+
+        for(int i = l;i <= r;i ++){
+            // 将arr[i]插入到合适的位置
+            E t = arr[i];
+            int j;
+            for(j = i;j - 1 >= l && t.compareTo (arr[j - 1]) < 0;j --){
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = t;
+        }
+    }
+
     private static <E> void swap(E[] arr,int i,int j){
         E t = arr[i];
         arr[i] = arr[j];
