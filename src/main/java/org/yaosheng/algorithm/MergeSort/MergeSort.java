@@ -1,7 +1,6 @@
 package org.yaosheng.algorithm.MergeSort;
 
 import org.yaosheng.algorithm.algorithm.ArrayGenerator;
-import org.yaosheng.algorithm.algorithm.InsertionSort;
 import org.yaosheng.algorithm.algorithm.SortingHelper;
 
 import java.util.Arrays;
@@ -28,8 +27,7 @@ public class MergeSort {
         sort (arr, l, mid);
         sort (arr, mid + 1, r);
 
-        if(arr[mid].compareTo (arr[mid + 1]) > 0)
-            merge (arr, l, mid, r);
+        merge (arr, l, mid, r);
     }
 
     public static <E extends Comparable<E>> void sort2(E[] arr){
@@ -44,24 +42,8 @@ public class MergeSort {
         int mid = (l + r) / 2;
         sort2 (arr, l, mid);
         sort2 (arr, mid + 1, r);
-        merge (arr, l, mid, r);
-    }
-
-    public static <E extends Comparable<E>> void sort3(E[] arr){
-        sort3 (arr,0,arr.length - 1);
-    }
-
-    private static <E extends Comparable<E>> void sort3(E[] arr,int l,int r){
-
-        if(r - l <= 15){
-            InsertionSort.sort3 (arr,l,r);
-            return;
-        }
-
-        int mid = (l + r) / 2;
-        sort3 (arr, l, mid);
-        sort3 (arr, mid + 1, r);
-        merge (arr, l, mid, r);
+        if(arr[mid].compareTo (arr[mid + 1]) > 0)
+            merge(arr, l, mid, r);
     }
 
     // 合并两个有序的区间
@@ -83,6 +65,46 @@ public class MergeSort {
                 i ++;
             }else{
                 arr[k] = temp[j - l];
+                j ++;
+            }
+        }
+    }
+
+    public static <E extends Comparable<E>> void sort3(E[] arr){
+        E[] temp = Arrays.copyOf(arr,arr.length);
+        sort3(arr,0,arr.length - 1,temp);
+    }
+
+    private static <E extends Comparable<E>> void sort3(E[] arr,int l,int r,E[] temp){
+
+        if(l >= r){
+            return;
+        }
+
+        int mid = (l + r) / 2;
+        sort3 (arr, l, mid, temp);
+        sort3 (arr, mid + 1, r, temp);
+        if(arr[mid].compareTo (arr[mid + 1]) > 0)
+            merge2 (arr, l, mid, r,temp);
+    }
+
+    private static <E extends Comparable<E>> void merge2(E[] arr,int l,int mid,int r,E[] temp){
+
+        System.arraycopy (arr,l,temp,l,r - l + 1);
+        int i = l,j = mid + 1;
+        // 每轮循环为arr[k]负值
+        for(int k = l;k < r;k ++){
+            if(i > mid){
+                arr[k] = temp[j];
+                j ++;
+            }else if(j > r){
+                arr[k] = temp[i];
+                i ++;
+            }else if(temp[i].compareTo (temp[j]) <= 0){
+                arr[k] = temp[i];
+                i ++;
+            }else{
+                arr[k] = temp[j];
                 j ++;
             }
         }
