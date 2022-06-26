@@ -4,6 +4,7 @@ import org.yaosheng.algorithm.algorithm.ArrayGenerator;
 import org.yaosheng.algorithm.algorithm.SortingHelper;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by yaosheng on 2022/6/26.
@@ -30,6 +31,9 @@ public class QuickSort {
 
     private static <E extends Comparable<E>> int partition(E[] arr,int l,int r){
 
+        // 生成[l,r]之间的随机索引
+        int p = l + (new Random ()).nextInt (r - l + 1);
+        swap (arr,l,p);
         // arr[l + 1...j] < v;arr[j + 1...i] >= v
         int j = l;
         for(int i = l + 1;i <= r;i ++){
