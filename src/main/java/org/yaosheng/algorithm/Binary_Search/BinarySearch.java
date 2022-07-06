@@ -26,4 +26,26 @@ public class BinarySearch {
             return search (data,mid + 1,r,target);
         return search (data,l,mid - 1,target);
     }
+
+    // target的最小值索引
+    public static <E extends Comparable<E>> int upper(E[] data,E target){
+
+        int l = 0,r = data.length;
+        // 在data[l,r]中寻解
+        while(l < r){
+            int mid = l + (r - l) / 2;
+            if(data[mid].compareTo (target) <= 0)
+                l = mid + 1;
+            else
+                r = mid;
+        }
+        return l;
+    }
+
+    public static void main(String[] args) {
+
+        Integer[] arr = {1,1,3,3,5,5};
+        for(int i = 0;i <= 6;i ++)
+            System.out.println (BinarySearch.upper (arr,i));
+    }
 }
