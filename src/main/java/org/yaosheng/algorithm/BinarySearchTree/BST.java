@@ -1,5 +1,9 @@
 package org.yaosheng.algorithm.BinarySearchTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * Created by yaosheng on 2022/7/7.
  * 二分搜索树
@@ -87,6 +91,23 @@ public class BST <E extends Comparable<E>> {
         preOrder (node.right);
     }
 
+    // 深度优先
+    public void preOrderNR(){
+
+        Stack<Node> stack = new Stack<> ();
+        stack.push (root);
+
+        while(!stack.isEmpty ()){
+            Node cur = stack.pop ();
+            System.out.println (cur.e);
+
+            if(cur.right != null)
+                stack.push (cur.right);
+            if(cur.left != null)
+                stack.push (cur.left);
+        }
+    }
+
     // 中序遍历
     public void inOrder(){
         inOrder (root);
@@ -114,6 +135,23 @@ public class BST <E extends Comparable<E>> {
         postOrder (node.left);
         postOrder (node.right);
         System.out.println (node.e);
+    }
+
+    // 广度优先
+    public void levelOrder(){
+
+        Queue<Node> q = new LinkedList<> ();
+        q.add (root);
+
+        while(!q.isEmpty ()){
+            Node cur = q.remove ();
+            System.out.println (cur.e);
+
+            if(cur.left != null)
+                q.add (cur.left);
+            if(cur.right != null)
+                q.add (cur.right);
+        }
     }
 
     @Override
