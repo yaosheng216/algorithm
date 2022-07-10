@@ -13,7 +13,12 @@ public class BSTMain {
             bst.add (num);
 
         bst.preOrder ();
-
         System.out.println (bst);
+
+        bst.inOrder ();
+        System.out.println ();
+
+        bst.postOrder ();
+        System.out.println ();
     }
 }

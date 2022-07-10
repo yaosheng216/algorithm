@@ -7,6 +7,7 @@ package org.yaosheng.algorithm.BinarySearchTree;
 public class BST <E extends Comparable<E>> {
 
     public class Node {
+
         public E e;
         public Node left,right;
 
@@ -84,6 +85,35 @@ public class BST <E extends Comparable<E>> {
         System.out.println (node.e);
         preOrder (node.left);
         preOrder (node.right);
+    }
+
+    // 中序遍历
+    public void inOrder(){
+        inOrder (root);
+    }
+
+    private void inOrder(Node node){
+
+        if(node == null)
+            return;
+        inOrder (node.left);
+        System.out.println (node.e);
+        inOrder (node.right);
+    }
+
+    // 后序遍历
+    public void postOrder(){
+        postOrder (root);
+    }
+
+    private void postOrder(Node node){
+
+        if(node == null)
+            return;
+
+        postOrder (node.left);
+        postOrder (node.right);
+        System.out.println (node.e);
     }
 
     @Override
