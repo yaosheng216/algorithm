@@ -91,7 +91,7 @@ public class BST <E extends Comparable<E>> {
         preOrder (node.right);
     }
 
-    // 深度优先
+    // 深度优先(DFS)
     public void preOrderNR(){
 
         Stack<Node> stack = new Stack<> ();
@@ -137,7 +137,7 @@ public class BST <E extends Comparable<E>> {
         System.out.println (node.e);
     }
 
-    // 广度优先
+    // 广度优先(BFS)
     public void levelOrder(){
 
         Queue<Node> q = new LinkedList<> ();
