@@ -33,6 +33,14 @@ public class Main {
         return (endTime - startTime) / 1000000000.0;
     }
 
+    public static int strLength(String s){
+
+        String[] str = s.split (" ");
+        int num = str[str.length - 1].length ();
+
+        return num;
+    }
+
     public static void main(String[] args) {
 
         String filename = "pride-and-prejudice.txt";
@@ -47,5 +55,7 @@ public class Main {
         double time2 = testMap(linkedListMap, filename);
 
         System.out.println("Linked List Map: " + time2 + " s");
+
+        System.out.println (strLength ("Hello World yaosheng"));
     }
 }

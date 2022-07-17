@@ -42,7 +42,7 @@ public class BST <E extends Comparable<E>> {
         root = add (root,e);
     }
 
-    // 向以node为根的二分搜索树中插入元素E，递归算法实现
+    // 向以node为根的二分搜索树中插入元素e，递归算法实现
     // 返回插入新节点后二分搜索树的根
     private Node add(Node node,E e){
 
@@ -91,23 +91,6 @@ public class BST <E extends Comparable<E>> {
         preOrder (node.right);
     }
 
-    // 深度优先(DFS)
-    public void preOrderNR(){
-
-        Stack<Node> stack = new Stack<> ();
-        stack.push (root);
-
-        while(!stack.isEmpty ()){
-            Node cur = stack.pop ();
-            System.out.println (cur.e);
-
-            if(cur.right != null)
-                stack.push (cur.right);
-            if(cur.left != null)
-                stack.push (cur.left);
-        }
-    }
-
     // 中序遍历
     public void inOrder(){
         inOrder (root);
@@ -154,13 +137,30 @@ public class BST <E extends Comparable<E>> {
         }
     }
 
+    // 深度优先(DFS)
+    public void preOrderNR(){
+
+        Stack<Node> stack = new Stack<> ();
+        stack.push (root);
+
+        while(!stack.isEmpty ()){
+            Node cur = stack.pop ();
+            System.out.println (cur.e);
+
+            if(cur.right != null)
+                stack.push (cur.right);
+            if(cur.left != null)
+                stack.push (cur.left);
+        }
+    }
+
     // 查找二分搜索树的最小元素
     public E minimum(){
 
         if(size == 0)
             throw new IllegalArgumentException ("BST is empty");
 
-        return  minimun (root).e;
+        return minimun (root).e;
     }
 
     // 返回以node为根的二分搜索树的最小值所在节点
