@@ -42,7 +42,9 @@ public class SortingHelper {
         else if(sortname.equals("HeapSort2"))
             HeapSort.sort2(arr);
         else if(sortname.equals ("BubbleSort"))
-            HeapSort.sort (arr);
+            BubbleSort.sort (arr);
+        else if(sortname.equals ("BubbleSort2"))
+            BubbleSort.sort2 (arr);
         long endTime = System.nanoTime();
 
         double time = (endTime - startTime) / 1000000000.0;
