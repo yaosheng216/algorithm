@@ -50,6 +50,8 @@ public class SortingHelper {
             BubbleSort.sort3 (arr);
         else if(sortname.equals ("ShellSort"))
             ShellSort.sort (arr);
+        else if(sortname.equals ("ShellSort2"))
+            ShellSort.sort2 (arr);
         long endTime = System.nanoTime();
 
         double time = (endTime - startTime) / 1000000000.0;
