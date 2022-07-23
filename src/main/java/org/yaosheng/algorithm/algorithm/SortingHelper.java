@@ -1,6 +1,7 @@
 package org.yaosheng.algorithm.algorithm;
 
 import org.yaosheng.algorithm.BubbleSort.BubbleSort;
+import org.yaosheng.algorithm.BubbleSort.ShellSort;
 import org.yaosheng.algorithm.MergeSort.MergeSort;
 import org.yaosheng.algorithm.QuickSort.QuickSort;
 import org.yaosheng.algorithm.heap.HeapSort;
@@ -47,6 +48,8 @@ public class SortingHelper {
             BubbleSort.sort2 (arr);
         else if(sortname.equals ("BubbleSort3"))
             BubbleSort.sort3 (arr);
+        else if(sortname.equals ("ShellSort"))
+            ShellSort.sort (arr);
         long endTime = System.nanoTime();
 
         double time = (endTime - startTime) / 1000000000.0;

@@ -1,5 +1,10 @@
 package org.yaosheng.algorithm.BubbleSort;
 
+import org.yaosheng.algorithm.algorithm.ArrayGenerator;
+import org.yaosheng.algorithm.algorithm.SortingHelper;
+
+import java.util.Arrays;
+
 /**
  * Created by yaosheng on 2022/7/23.
  * 希尔排序
@@ -25,5 +30,15 @@ public class ShellSort {
             }
             h /= 2;
         }
+    }
+
+    public static void main(String[] args) {
+
+        int n = 1000000;
+        Integer[] arr = ArrayGenerator.generateRandomArray (n,n);
+        Integer[] arr2 = Arrays.copyOf (arr,arr.length);
+
+        SortingHelper.sortTest ("ShellSort",arr);
+        SortingHelper.sortTest ("InsertionSort",arr2);
     }
 }
