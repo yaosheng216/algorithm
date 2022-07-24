@@ -1,10 +1,10 @@
-package org.yaosheng.algorithm.algorithm;
+package org.yaosheng.algorithm.Algorithm;
 
 import org.yaosheng.algorithm.BubbleSort.BubbleSort;
 import org.yaosheng.algorithm.BubbleSort.ShellSort;
 import org.yaosheng.algorithm.MergeSort.MergeSort;
 import org.yaosheng.algorithm.QuickSort.QuickSort;
-import org.yaosheng.algorithm.heap.HeapSort;
+import org.yaosheng.algorithm.Heap.HeapSort;
 
 /**
  * Created by yaosheng on 2022/6/11.

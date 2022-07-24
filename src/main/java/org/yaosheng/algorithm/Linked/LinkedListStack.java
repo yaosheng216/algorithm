@@ -1,6 +1,6 @@
 package org.yaosheng.algorithm.Linked;
 
-import org.yaosheng.algorithm.data_structures.Stack;
+import org.yaosheng.algorithm.Data_Structures.Stack;
 
 /**
  * Created by yaosheng on 2022/6/13.

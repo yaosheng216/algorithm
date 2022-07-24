@@ -1,4 +1,4 @@
-package org.yaosheng.algorithm.algorithm;
+package org.yaosheng.algorithm.Algorithm;
 
 import java.util.Random;
 

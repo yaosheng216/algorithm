@@ -1,7 +1,7 @@
 package org.yaosheng.algorithm.QuickSort;
 
-import org.yaosheng.algorithm.algorithm.ArrayGenerator;
-import org.yaosheng.algorithm.algorithm.SortingHelper;
+import org.yaosheng.algorithm.Algorithm.ArrayGenerator;
+import org.yaosheng.algorithm.Algorithm.SortingHelper;
 
 import java.util.Arrays;
 import java.util.Random;

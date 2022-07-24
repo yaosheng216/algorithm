@@ -1,4 +1,4 @@
-package org.yaosheng.algorithm.data_structures;
+package org.yaosheng.algorithm.Data_Structures;
 
 /**
  * Created by yaosheng on 2022/6/12.

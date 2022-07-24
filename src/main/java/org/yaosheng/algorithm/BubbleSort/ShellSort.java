@@ -1,7 +1,7 @@
 package org.yaosheng.algorithm.BubbleSort;
 
-import org.yaosheng.algorithm.algorithm.ArrayGenerator;
-import org.yaosheng.algorithm.algorithm.SortingHelper;
+import org.yaosheng.algorithm.Algorithm.ArrayGenerator;
+import org.yaosheng.algorithm.Algorithm.SortingHelper;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package org.yaosheng.algorithm.algorithm;
+package org.yaosheng.algorithm.Algorithm;
 
 /**
  * Created by yaosheng on 2022/6/7.

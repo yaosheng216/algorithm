@@ -1,6 +1,4 @@
-package org.yaosheng.algorithm.algorithm;
-
-import java.util.Arrays;
+package org.yaosheng.algorithm.Algorithm;
 
 /**
  * Created by yaosheng on 2022/6/11.

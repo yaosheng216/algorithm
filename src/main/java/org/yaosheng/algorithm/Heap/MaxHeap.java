@@ -1,6 +1,6 @@
-package org.yaosheng.algorithm.heap;
+package org.yaosheng.algorithm.Heap;
 
-import org.yaosheng.algorithm.data_structures.Array;
+import org.yaosheng.algorithm.Data_Structures.Array;
 
 /**
  * Created by yaosheng on 2022/7/19.

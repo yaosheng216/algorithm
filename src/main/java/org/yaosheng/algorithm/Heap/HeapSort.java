@@ -1,7 +1,7 @@
-package org.yaosheng.algorithm.heap;
+package org.yaosheng.algorithm.Heap;
 
-import org.yaosheng.algorithm.algorithm.ArrayGenerator;
-import org.yaosheng.algorithm.algorithm.SortingHelper;
+import org.yaosheng.algorithm.Algorithm.ArrayGenerator;
+import org.yaosheng.algorithm.Algorithm.SortingHelper;
 
 import java.util.Arrays;
 

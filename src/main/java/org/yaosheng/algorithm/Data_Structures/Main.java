@@ -1,4 +1,4 @@
-package org.yaosheng.algorithm.data_structures;
+package org.yaosheng.algorithm.Data_Structures;
 
 import org.yaosheng.algorithm.Linked.LinkedListStack;
 
