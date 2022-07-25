@@ -1,32 +1,34 @@
 package org.yaosheng.algorithm.LeetCode;
 
+import org.yaosheng.algorithm.SegmentTree.SegmentTree;
+
 /**
  * Created by yaosheng on 2022/7/25.
  */
 public class LeetCode_307 {
 
-    private int[] sum;
-    private int[] data;
+    private SegmentTree<Integer> segmentTree;
 
     public LeetCode_307(int[] nums) {
 
-        data = new int[nums.length];
-        for(int i = 0;i < nums.length;i ++)
-            data[i] = nums[i];
+        if (nums.length > 0) {
+            Integer[] data = new Integer[nums.length];
+            for (int i = 0; i < nums.length; i++)
+                data[i] = nums[i];
 
-        sum = new int[nums.length + 1];
-        sum[0] = 0;
-        for(int i = 1;i < sum.length;i ++)
-            sum[i] = sum[i - 1] + nums[i - 1];
+            segmentTree = new SegmentTree<> (data, (a, b) -> a + b);
+        }
     }
 
     public void update(int index, int val) {
-        data[index] = val;
-        for(int i = index + 1;i < sum.length;i ++)
-            sum[i] = sum[i - 1] + data[i - 1];
+        if(segmentTree == null)
+            throw new IllegalArgumentException ("Segment Tree is null");
+        segmentTree.set (index,val);
     }
 
     public int sumRange(int left, int right) {
-        return sum[right + 1] - sum[left];
+        if(segmentTree == null)
+            throw new IllegalArgumentException ("Segment Tree is null");
+        return segmentTree.query (left,right);
     }
 }
