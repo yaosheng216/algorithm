@@ -57,5 +57,9 @@ public class Main {
         System.out.println("Linked List Map: " + time2 + " s");
 
         System.out.println (strLength ("Hello World yaosheng"));
+
+        AVLMap<String,Integer> avlMap = new AVLMap<> ();
+        double time3 = testMap (avlMap,filename);
+        System.out.println ("AVL Map: " + time3 + " s");
     }
 }
