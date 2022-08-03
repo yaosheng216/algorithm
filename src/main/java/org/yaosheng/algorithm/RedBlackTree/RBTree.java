@@ -51,13 +51,32 @@ public class RBTree<K extends Comparable<K>,V> {
         return node.color;
     }
 
-    // 向二分搜索树中添加新的元素(key, value)
-    public void add(K key, V value){
-        root = add(root, key, value);
+    //   node                      x
+    //  /    \       左旋转       /   \
+    // T1     x   ---------->  node  T3
+    //       / \               /   \
+    //      T2 T3             T1   T2
+    private Node leftRotate(Node node){
+
+        Node x = node.right;
+        // 左旋转
+        node.right = x.left;
+        x.left = node;
+
+        x.color = node.color;
+        node.color = RED;
+
+        return x;
     }
 
-    // 向以node为根的二分搜索树中插入元素(key, value)，递归算法
-    // 返回插入新节点后二分搜索树的根
+    // 向红黑树中添加新的元素(key, value)
+    public void add(K key, V value){
+        root = add(root, key, value);
+        root.color = BLACK;
+    }
+
+    // 向以node为根的红黑树中插入元素(key, value)，递归算法
+    // 返回插入新节点后红黑树的根
     private Node add(Node node, K key, V value){
 
         if(node == null){
