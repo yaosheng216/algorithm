@@ -106,7 +106,7 @@ public class RBTree<K extends Comparable<K>,V> {
 
         if(node == null){
             size ++;
-            return new Node(key, value);
+            return new Node(key, value);   // 默认插入红色节点
         }
 
         if(key.compareTo(node.key) < 0)
@@ -115,6 +115,15 @@ public class RBTree<K extends Comparable<K>,V> {
             node.right = add(node.right, key, value);
         else
             node.value = value;
+
+        if(isRed (node.right) && !isRed (node.left))
+            node = leftRotate (node);
+
+        if(isRed (node.left) && isRed (node.left.left))
+            node = rightRotate (node);
+
+        if(isRed (node.left) && isRed (node.right))
+            flipColors (node);
 
         return node;
     }
