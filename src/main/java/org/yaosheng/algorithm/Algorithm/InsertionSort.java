@@ -11,7 +11,6 @@ public class InsertionSort {
     public static <E extends Comparable<E>> void sort(E[] arr){
 
         for(int i = 0; i < arr.length; i ++){
-
             // 将arr[i]插入到合适的位置
             E t = arr[i];
             int j;
