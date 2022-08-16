@@ -42,4 +42,34 @@ public class HashTable<K,V> {
             size ++;
         }
     }
+
+    public V remove(K key){
+
+        TreeMap<K,V> map = hashtable[hash (key)];
+        V ret = null;
+        if(map.containsKey (key)){
+            ret = map.remove (key);
+            size --;
+        }
+        return ret;
+    }
+
+    // 修改HashMap中的一个元素
+    public void set(K key,V value){
+
+        TreeMap<K,V> map = hashtable[hash (key)];
+        if(!map.containsKey (key))
+            throw new IllegalArgumentException (key + " doesn't exist!");
+
+        map.put (key, value);
+    }
+
+    public boolean contains(K key){
+        return hashtable[hash (key)].containsKey (key);
+    }
+
+    // 从HashTable中查找一个元素
+    public V get(K key){
+        return hashtable[hash (key)].get (key);
+    }
 }
