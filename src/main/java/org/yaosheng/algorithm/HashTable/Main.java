@@ -1,5 +1,6 @@
 package org.yaosheng.algorithm.HashTable;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -37,5 +38,25 @@ public class Main {
         Student student1 = new Student (6,2,"sheng","yao");
         System.out.println (student1.hashCode ());
 
+        // Test HashTable
+        long start = System.nanoTime();
+        ArrayList<String> words = new ArrayList<>();
+
+        // HashTable<String, Integer> ht = new HashTable<>();
+        HashTable<String, Integer> ht = new HashTable<>(131071);
+        for (String word : words) {
+            if (ht.contains(word))
+                ht.set(word, ht.get(word) + 1);
+            else
+                ht.add(word, 1);
+        }
+
+        for(String word: words)
+            ht.contains(word);
+
+        long end = System.nanoTime();
+
+        double time = (end - start) / 1000000000.0;
+        System.out.println("HashTable: " + time + " s");
     }
 }
