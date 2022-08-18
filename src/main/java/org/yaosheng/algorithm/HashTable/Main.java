@@ -43,7 +43,7 @@ public class Main {
         ArrayList<String> words = new ArrayList<>();
 
         // HashTable<String, Integer> ht = new HashTable<>();
-        HashTable<String, Integer> ht = new HashTable<>(131071);
+        HashTable<String, Integer> ht = new HashTable<> ();
         for (String word : words) {
             if (ht.contains(word))
                 ht.set(word, ht.get(word) + 1);
