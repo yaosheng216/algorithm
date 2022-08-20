@@ -51,4 +51,16 @@ public class LeetCode_303_3 {
 
         return res;
     }
+
+    public void update(int i,int val){
+
+        if(i < 0 || i >= N)
+            return;
+
+        int b = i / B;
+        blocks[b] -= data[i];
+        blocks[b] += val;
+
+        data[i] = val;
+    }
 }
