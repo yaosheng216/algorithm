@@ -9,9 +9,6 @@ public class LCGames_6150 {
 
     public static String smallestNumber(String pattern){
 
-        if(pattern.length () == 0)
-            return "";
-
         char[] c = pattern.toCharArray ();
         int[] arr = new int[pattern.length () + 1];
         int k = 1,j = 9;
@@ -33,14 +30,7 @@ public class LCGames_6150 {
                 }
             }
         }
-
-        arr[arr.length - 1] = j;
-        String s = Arrays.toString (arr);
-        String s1 = s.replace ("[","");
-        String s2 = s1.replace ("]","");
-        String s3 = s2.replaceAll (",","");
-        String s4 = s3.replaceAll (" ","");
-        return s4;
+        return new String (c);
     }
 
     public static void main(String[] args) {
