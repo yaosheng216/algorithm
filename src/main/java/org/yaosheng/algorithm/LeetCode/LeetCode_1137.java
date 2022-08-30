@@ -22,6 +22,6 @@ public class LeetCode_1137 {
     }
 
     public static void main(String[] args) {
-        System.out.println (tribonacci (1));
+        System.out.println (tribonacci (5));
     }
 }
