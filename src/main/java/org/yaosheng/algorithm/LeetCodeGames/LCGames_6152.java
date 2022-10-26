@@ -27,7 +27,6 @@ public class LCGames_6152 {
     }
 
     public static void main(String[] args) {
-
         int[] energy = {1};
         int[] experience= {3};
         System.out.println (minNumberOfHours (2,4,energy,experience));

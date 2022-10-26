@@ -113,13 +113,12 @@ public class MarkovChainUtil {
                 }
             }
         }
-
     }
 
     public static void main(String[] args) throws Exception {
 
-        int[] nums = {2,996,2,2,12,1024};   //在这里填写你拥有的数字牌
-        String[] ops = {"<<","^",">>","-"};   //在这里填写你拥有的运算符牌
+        int[] nums = {1024,1,7,27,30};   //在这里填写你拥有的数字牌
+        String[] ops = {"<<","&","*"};   //在这里填写你拥有的运算符牌
 
         Set<String> allOps = new HashSet<>(Arrays.asList("+", "-", "*", "**", "%", "//", "|", "&", "^", "<<", ">>"));
         Set<String> myOpSet = new HashSet<>(Arrays.asList(ops));
