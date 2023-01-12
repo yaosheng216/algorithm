@@ -43,7 +43,6 @@ public class Array<E> {
 
     // 向所有元素后添加一个新元素
     public void addLast(E e){
-
         add (size,e);
     }
 
@@ -145,7 +144,6 @@ public class Array<E> {
         if(i < 0 || i >= size || j < 0 || j >= size){
             throw new IllegalArgumentException ("Index is illegal.");
         }
-
         E t = data[i];
         data[i] = data[j];
         data[j] = t;
