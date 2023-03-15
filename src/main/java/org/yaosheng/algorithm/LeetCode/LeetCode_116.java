@@ -14,7 +14,7 @@ public class LeetCode_116 {
         public Node next;
 
         public Node(){}
-        public Node(int _val) {
+        public Node(int _val){
             val = _val;
         }
 
