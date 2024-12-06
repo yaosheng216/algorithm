@@ -1,4 +1,7 @@
-
+/**
+ * Created by yaosheng on 2024/12/6.
+ * 单调栈
+ */
 class Solution {
     int largestRectangleArea(int[] heights) {
         Stack<Integer> st = new Stack<Integer>();
